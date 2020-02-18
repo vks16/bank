@@ -7,7 +7,7 @@ void new_acc()
     
     ptr=fopen("record.dat", "a+");
     account_no:
-    //system("clear");
+    system("clear");
     printf("\t\t\t\xB2\xB2\xB2  ADD RECORD  \xB2\xB2\xB2\xB2\x0A");
     printf("\n\n\nEnter today's date(dd/mm/yyyy):");
     scanf("%d/%d/%d", &add.deposit.day, &add.deposit.month, &add.deposit.year);
@@ -46,7 +46,7 @@ void new_acc()
         add_invalid:
         printf("\n\n\n\t\tEnter 1 to go to the main menu and 0 to exit:");
         scanf("%d", &main_exit);
-        // system("clear");
+        system("clear");
         if(main_exit == 1)
             menu();
         else if(main_exit == 0)
