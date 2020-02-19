@@ -14,6 +14,7 @@ void new_acc()
     scanf("%d/%d/%d", &add.deposit.day, &add.deposit.month, &add.deposit.year);
     printf("\nEnter the account number: ");
     scanf("%16s", &check.acc_no);
+    
     while(fscanf(ptr, "%s %s %d/%d/%d %d %s %s %s %s %f %d/%d/%d\n", &add.acc_no, add.name, &add.dob.day, &add.dob.month, &add.dob.year, &add.age, add.address, add.citizenship, add.phone, add.acc_type, &add.amt, &add.deposit.day, &add.deposit.month, &add.deposit.year) != EOF)
     {
 
@@ -28,17 +29,21 @@ void new_acc()
         scanf("%c", &temp); // for clearing buffer
         printf("\nEnter the name:");
         scanf("%[^\n]", add.name);
-        // gets(add.name);
+        scanf("%c", &temp); // for clearing input buffer
         printf("\nEnter the date of birth(dd/mm/yyyy):");
         scanf("%d/%d/%d", &add.dob.day, &add.dob.month, &add.dob.year);
         printf("\nEnter the age:");
         scanf("%d", &add.age);
+        scanf("%c", &temp); // for clearing input buffer
         printf("\nEnter the address:");
-        scanf("%s", add.address);
-        printf("\nEnter the Aadhaar number:");
-        scanf("%s", add.citizenship);
+        scanf("%[^\n]", add.address);
+        scanf("%c", &temp); // for clearing input buffer
+        printf("\nEnter your citizenship (Indian or NRI):");
+        scanf("%[^\n]", add.citizenship);
+        scanf("%c", &temp); // for clearing input buffer
         printf("\nEnter your contact no.:");
-        scanf("%s", add.phone);
+        scanf("%[^\n]", add.phone);
+        scanf("%c", &temp); // for clearing input buffer
         printf("\nEnter the amount to deposit:Rs.");
         scanf("%lf", &add.amt);
         printf("\nType of account:\n\t#Saving\n\t#Current\n\t#Fixed(no. of years)\n\tEnter your choice:");
