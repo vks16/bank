@@ -18,10 +18,9 @@ void menu(void)
         case 2:
         case 3:
         case 4:
-        case 5:
-        case 6:
-            menu();
-        break;
+        case 5:menu();break;
+        case 6:view_list();
+	    break;
         case 7:close();
 
 

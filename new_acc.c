@@ -24,8 +24,9 @@ void new_acc()
         }
     }
         strcpy(add.acc_no, check.acc_no);
-        printf("\nEnter the name:");
+        puts("\nEnter the name:");
         scanf("%s", add.name);
+        // gets(add.name);
         printf("\nEnter the date of birth(dd/mm/yyyy):");
         scanf("%d/%d/%d", &add.dob.day, &add.dob.month, &add.dob.year);
         printf("\nEnter the age:");
@@ -34,12 +35,14 @@ void new_acc()
         scanf("%s", add.address);
         printf("\nEnter the Aadhaar number:");
         scanf("%s", add.citizenship);
+        printf("\nEnter your contact no.:");
+        scanf("%s", add.phone);
         printf("\nEnter the amount to deposit:Rs.");
         scanf("%lf", &add.amt);
         printf("\nType of account:\n\t#Saving\n\t#Current\n\t#Fixed(no. of years)\n\tEnter your choice:");
         scanf("%s", add.acc_type);
 
-            fprintf(ptr, "%s %s %d/%d/%d %d %s %s %s %s %.2lf %d/%d/%d\n", check.acc_no, add.name, add.dob.day, add.dob.month, add.dob.year, add.age, add.address, add.citizenship, add.phone, add.acc_type, add.amt, add.deposit.day, add.deposit.month, add.deposit.year);
+            fprintf(ptr, "%s %s %d/%d/%d %d %s %s %s %s %.2lf %d/%d/%d\n", add.acc_no, add.name, add.dob.day, add.dob.month, add.dob.year, add.age, add.address, add.citizenship, add.phone, add.acc_type, add.amt, add.deposit.day, add.deposit.month, add.deposit.year);
 
         fclose(ptr);
         printf("\nAccount created successfully!");
@@ -57,7 +60,7 @@ void new_acc()
                 goto add_invalid;
             }   
 
-    fclose(ptr);
-    free(ptr);
+    
+    
 }
 

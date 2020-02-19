@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+// #include<sqlite3.h>
 
 int i, j;
 int main_exit;
@@ -33,5 +34,7 @@ void fordelay(int);
 void new_acc();
 
 void close(void);
+
+void view_list();
 
 void menu(void);

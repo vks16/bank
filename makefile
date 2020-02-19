@@ -1,3 +1,5 @@
+view_list.o: view_list.c common.h
+	gcc -c view_list.c
 close.o: close.c common.h
 	gcc -c close.c
 fordelay.o: fordelay.c common.h
