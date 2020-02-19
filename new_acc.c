@@ -4,7 +4,8 @@ void new_acc()
 {
     int choice;
     FILE *ptr;
-    
+    char temp;
+
     ptr=fopen("record.dat", "a+");
     account_no:
     system("clear");
@@ -24,8 +25,9 @@ void new_acc()
         }
     }
         strcpy(add.acc_no, check.acc_no);
-        puts("\nEnter the name:");
-        scanf("%s", add.name);
+        scanf("%c", &temp); // for clearing buffer
+        printf("\nEnter the name:");
+        scanf("%[^\n]", add.name);
         // gets(add.name);
         printf("\nEnter the date of birth(dd/mm/yyyy):");
         scanf("%d/%d/%d", &add.dob.day, &add.dob.month, &add.dob.year);
